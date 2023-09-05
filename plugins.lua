@@ -74,19 +74,23 @@ local plugins = {
   },
   -- Undotree
   {
-    'mbbill/undotree'
+    'mbbill/undotree',
+    event = 'VeryLazy',
   },
   -- Fugitive (Git Integration)
   {
-    'tpope/vim-fugitive'
+    'tpope/vim-fugitive',
+    event = 'VeryLazy',
   },
   -- Codeium
   {
-    'Exafunction/codeium.vim'
+    'Exafunction/codeium.vim',
+    event = 'VeryLazy',
   },
   -- vim-tmux-navigator
   {
-    'christoomey/vim-tmux-navigator'
+    'christoomey/vim-tmux-navigator',
+    event = 'VeryLazy',
   },
 }
 
