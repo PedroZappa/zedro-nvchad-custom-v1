@@ -2,7 +2,10 @@
 local M = {}
 
 -- Set Theme
-M.ui = { theme = 'nightowl' }
+M.ui = { 
+  theme = 'ayu_dark',
+  transparency = true;
+}
 
 -- Plugins
 M.plugins = "custom.plugins"
