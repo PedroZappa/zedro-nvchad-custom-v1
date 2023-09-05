@@ -71,8 +71,23 @@ local plugins = {
         dapui.close()
       end
     end
-  }
+  },
+  -- Undotree
+  {
+    'mbbill/undotree'
+  },
+  -- Fugitive (Git Integration)
+  {
+    'tpope/vim-fugitive'
+  },
+  -- Codeium
+  {
+    'Exafunction/codeium.vim'
+  },
+  -- vim-tmux-navigator
+  {
+    'christoomey/vim-tmux-navigator'
+  },
 }
-
 
 return plugins

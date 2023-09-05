@@ -10,4 +10,7 @@ M.plugins = "custom.plugins"
 -- Mappings
 M.mappings = require('custom.mappings')
 
+-- Custom Settings
+require('custom.set')
+
 return M

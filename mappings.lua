@@ -13,30 +13,43 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
-
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Give exec permission to file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/zedro/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 -- Source Neovim
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
   end
 )
+
+-- nvim-tree key mappings
+vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
+
+-- telescope key mappings
+  -- All file search
+--vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+  -- Git file search
+--vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+  -- Project search
+--vim.keymap.set('n', '<leader>ps', function()
+--	builtin.grep_string({ search = vim.fn.input("Grep > ") });
+--iend)
+
+-- undotree key mappings 
+  -- Keymap Toggle
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Fugitive (Git integration)
+-- Keymap: GitStatus
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+-- Codeium Keybings
+vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+vim.keymap.set('i', '<c-<>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+vim.keymap.set('i', '<c->>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
 
 -- nvim-dap key mappings
 M.dap = {
