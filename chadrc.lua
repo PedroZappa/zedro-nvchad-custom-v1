@@ -14,9 +14,6 @@ M.plugins = "custom.plugins"
 -- Mappings
 M.mappings = require('custom.mappings')
 
--- Custom Settings
-require('custom.set')
-
 -- Options
   -- Line Numbers
 opt.number = true
