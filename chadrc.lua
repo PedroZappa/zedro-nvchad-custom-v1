@@ -7,4 +7,7 @@ M.ui = { theme = 'nightowl' }
 -- Plugins
 M.plugins = "custom.plugins"
 
+-- Mappings
+M.mappings = require('custom.mappings')
+
 return M
