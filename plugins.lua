@@ -101,6 +101,19 @@ local plugins = {
         'numToStr/Comment.nvim',
         lazy = false,
     },
+    -- Colorizer
+    {
+        'uga-rosa/ccc.nvim',
+        event = 'VeryLazy',
+    },
+    -- Lazygit
+    {
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
 }
 
 return plugins

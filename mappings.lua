@@ -44,10 +44,12 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- Fugitive (Git integration)
 -- Keymap: GitStatus
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+-- lazygit
+vim.keymap.set("n", "<leader>gg", "<Cmd>LazyGit<CR>")
 
 -- Codeium Keybings
 vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+vim.keymap.set('i', '<C-x>', function () return vim.fn['codeium#Clear']() end, { expr = true })
 
 -- nvim-dap key mappings
 M.dap = {
