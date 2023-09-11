@@ -14,23 +14,30 @@ M.plugins = "custom.plugins"
 -- Mappings
 M.mappings = require('custom.mappings')
 
--- Options
-  -- Line Numbers
+-- Options--
+-- Line Numbers
 opt.number = true
+opt.numberwidth = 4
 opt.relativenumber = true
-  -- Tabs
+opt.ignorecase = true
+opt.smartcase = true
+-- Tabs
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
-  -- Indentation
+-- Buffer tabs 
+opt.showtabline = 2
+-- Indentation
+opt.autoindent = true
 opt.smartindent = true
 
 -- Scroll
-opt.scrolloff = 8
+opt.scrolloff = 15
 
 -- Backup
 opt.backup = false
+opt.writebackup = false
 opt.swapfile = false
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true

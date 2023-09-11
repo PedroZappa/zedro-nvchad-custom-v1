@@ -96,6 +96,11 @@ local plugins = {
         'christoomey/vim-tmux-navigator',
         event = 'VeryLazy',
     },
+    -- Comment
+    {
+        'numToStr/Comment.nvim',
+        lazy = false,
+    },
 }
 
 return plugins
