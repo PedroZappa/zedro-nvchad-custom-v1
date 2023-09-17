@@ -9,10 +9,10 @@ local capabilities = base.capabilities
 -- Import Zedro's LSP config
 --
 -- [ Disregard IDE warning: They shouldn't effect the config ]
-local lspconfig = require('lspconfig')
+-- local lspconfig = require('lspconfig')
 
 -- Call setup function of 'clangd' on lspconfig plugin 
-lspconfig.clangd.setup {
+base.clangd.setup {
   -- add function for on_attach value
   on_attach = function (client, bufnr)
     -- small overrides to fix bug within NvChad & 'clangd'
