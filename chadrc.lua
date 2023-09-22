@@ -21,6 +21,8 @@ opt.numberwidth = 4
 opt.relativenumber = true
 opt.ignorecase = true
 opt.smartcase = true
+opt.cursorline = true
+opt.cursorcolumn = true
 -- Tabs
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -49,6 +51,7 @@ opt.incsearch = true
 vim.opt.updatetime = 50
 
 -- Other
+opt.showcmd = true
 vim.opt.isfname:append("@-@")
 vim.opt.signcolumn = "yes"
 
