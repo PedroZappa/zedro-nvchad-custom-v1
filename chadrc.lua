@@ -21,8 +21,14 @@ opt.numberwidth = 4
 opt.relativenumber = true
 opt.ignorecase = true
 opt.smartcase = true
+
+-- Cursor
 opt.cursorline = true
 opt.cursorcolumn = true
+opt.whichwrap = '<,>'
+-- Set the cursor line to have a line at the bottom
+vim.cmd('highlight CursorLine gui=underline cterm=underline')
+
 -- Tabs
 opt.tabstop = 4
 opt.softtabstop = 4
