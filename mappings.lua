@@ -24,6 +24,18 @@ vim.keymap.set("n", "<leader><leader>", function()
   end
 )
 
+--" Folding and Unfolding
+--" Open all folds
+--vim.keymap.set("n", "<leader>of", "<cmd>set foldlevel=0<CR>)")
+-- Close all folds
+--vim.keymap.set("n", "<leader>cf", "<cmd>set foldlevel=99<CR>")
+-- Open all folds
+vim.api.nvim_set_keymap('n', '<leader>of', ':normal! foldopen=all<CR>', { noremap = true, silent = true })
+
+-- Close all folds
+vim.api.nvim_set_keymap('n', '<leader>cf', ':normal! foldclose=all<CR>', { noremap = true, silent = true })
+
+
 -- nvim-tree key mappings
 vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 

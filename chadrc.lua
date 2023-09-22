@@ -3,7 +3,7 @@ local M = {}
 local opt = vim.opt
 
 -- Set Theme
-M.ui = { 
+M.ui = {
   theme = 'chadracula',
   transparency = true;
 }
@@ -41,7 +41,10 @@ opt.autoindent = true
 opt.smartindent = true
 
 -- Scroll
-opt.scrolloff = 15
+opt.scrolloff = 7
+opt.sidescrolloff = 7
+-- Fold Marks
+opt.fmr = "{{{,}}}"
 
 -- Backup
 opt.backup = false
@@ -67,6 +70,14 @@ vim.cmd [[
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
+]]
+
+vim.cmd [[
+  augroup cursor_off
+    autocmd!
+    autocmd WinLeave * set nocursorline nocursorcolumn
+    autocmd WinEnter * set cursorline cursorcolumn
+  augroup END
 ]]
 
 
