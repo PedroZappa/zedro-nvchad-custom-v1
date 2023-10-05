@@ -33,7 +33,7 @@ vim.cmd('highlight CursorLine gui=underline cterm=underline')
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true
+opt.expandtab = false 
 -- Buffer tabs 
 opt.showtabline = 2
 -- Indentation

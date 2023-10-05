@@ -116,6 +116,11 @@ local plugins = {
             "nvim-lua/plenary.nvim"
         },
     },
+	-- 42Header
+	{
+		"42Paris/42header",
+		event = "VeryLazy",
+	}
 }
 
 return plugins
