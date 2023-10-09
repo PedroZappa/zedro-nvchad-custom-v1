@@ -24,6 +24,7 @@ opt.smartcase = true
 
 -- Cursor
 opt.cursorline = true
+-- opt.cursorlineopt = 'both'
 opt.cursorcolumn = true
 opt.whichwrap = '<,>'
 -- Set the cursor line to have a line at the bottom
@@ -33,7 +34,7 @@ vim.cmd('highlight CursorLine gui=underline cterm=underline')
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = false 
+opt.expandtab = false
 -- Buffer tabs 
 opt.showtabline = 2
 -- Indentation
@@ -64,6 +65,8 @@ opt.showcmd = true
 vim.opt.isfname:append("@-@")
 vim.opt.signcolumn = "yes"
 
+-- Autocommands
+--
 -- Highlight on yank
 vim.cmd [[
   augroup YankHighlight
@@ -72,6 +75,7 @@ vim.cmd [[
   augroup end
 ]]
 
+-- Turn off cursor when changing buffer
 vim.cmd [[
   augroup cursor_off
     autocmd!
@@ -79,6 +83,14 @@ vim.cmd [[
     autocmd WinEnter * set cursorline cursorcolumn
   augroup END
 ]]
+
+-- FileType Autocommands
+vim.api.nvim_exec([[
+	augroup filetype_vim
+		autocmd!
+		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
+	augroup END
+]], false)
 
 
 return M
