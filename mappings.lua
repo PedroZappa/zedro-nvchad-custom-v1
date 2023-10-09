@@ -52,6 +52,7 @@ vim.api.nvim_set_keymap('n', '<leader>cf', ':normal! foldclose=all<CR>', { norem
 
 -- nvim-tree key mappings
 vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
 
 -- telescope key mappings
   -- All file search
