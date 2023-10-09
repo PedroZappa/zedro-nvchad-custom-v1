@@ -13,8 +13,6 @@ opt.cursorline = true
 -- opt.cursorlineopt = 'both'
 opt.cursorcolumn = true
 opt.whichwrap = '<,>'
--- Set the cursor line to have a line at the bottom
-vim.cmd('highlight CursorLine gui=underline cterm=underline')
 
 -- Tabs
 opt.tabstop = 4
@@ -63,6 +61,18 @@ autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
+
+-- FileType Autocommands
+-- vim.api.nvim_exec([[
+-- 	augroup filetype_vim
+-- 		autocmd!
+-- 		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
+-- 	augroup END
+-- ]], false)
+
+-- Vim Commands
+-- Set the cursor line to have a line at the bottom
+--vim.cmd('highlight CursorLine gui=underline cterm=underline')
 -- Highlight on yank
 vim.cmd [[
   augroup YankHighlight
@@ -79,12 +89,3 @@ vim.cmd [[
     autocmd WinEnter * set cursorline cursorcolumn
   augroup END
 ]]
-
--- FileType Autocommands
-vim.api.nvim_exec([[
-	augroup filetype_vim
-		autocmd!
-		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
-	augroup END
-]], false)
-
