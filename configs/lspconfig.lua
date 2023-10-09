@@ -1,15 +1,18 @@
--- Import Base NvChad LSP config
-local base = require('plugins.configs.lspconfig')
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
--- Import Base Functions
-local on_attach = base.on_attach
-local capabilities = base.capabilities
-
---
--- Import Zedro's LSP config
---
 -- [ Disregard IDE warning: They shouldn't effect the config ]
-local lspconfig = require('lspconfig')
+local lspconfig = require "lspconfig"
+
+-- if you just want default config for the servers then put them in a table
+local servers = { "html", "cssls", "tsserver", "clangd" }
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
 
 -- Call setup function of 'clangd' on lspconfig plugin 
 lspconfig.clangd.setup {

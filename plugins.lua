@@ -1,3 +1,5 @@
+local overrides = require("custom.configs.overrides")
+
 local plugins = {
     -- null-ls configuration
     {
@@ -18,16 +20,17 @@ local plugins = {
         end
     },
     -- Package Manager for LSP, DAPs, linters & formatters
-    {
-        'williamboman/mason.nvim',
-        opts = {
-            ensure_installed = {
-               "clangd",
-                "clang-format",
-                "codelldb"
-            }
-        }
-    },
+    -- {
+    --     'williamboman/mason.nvim',
+    --     opts = {
+    --         ensure_installed = {
+    --            "clangd",
+    --             "clang-format",
+    --             "codelldb"
+    --         }
+    --     }
+    -- },
+
     -- DAP (Debug Adapter Protocol)
      {
         'mfussenegger/nvim-dap',
@@ -126,7 +129,13 @@ local plugins = {
 		'iamcco/markdown-preview.nvim',
 		run = function() vim.fn['mkdp#util#install']() end,
 		event = "VeryLazy",
-	}
+	},
+
+	-- Config overrides
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = overrides.nvimtree,
+	},
 }
 
 return plugins
