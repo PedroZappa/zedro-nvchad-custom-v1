@@ -35,9 +35,9 @@ vim.keymap.set("n", "<C-right>", "<C-w><")
 -- formatting
 -- trim whitespace from the end of every line
 vim.api.nvim_set_keymap('n', '<leader>trm', ':%s/\\s\\+$//<CR>', { noremap = true, silent = true })
-     
-  
-  
+
+
+
 --" Folding and Unfolding
 --" Open all folds
 --vim.keymap.set("n", "<leader>of", "<cmd>set foldlevel=0<CR>)")
@@ -52,6 +52,7 @@ vim.api.nvim_set_keymap('n', '<leader>cf', ':normal! foldclose=all<CR>', { norem
 
 -- nvim-tree key mappings
 vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
 
 -- telescope key mappings
   -- All file search
@@ -63,7 +64,7 @@ vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 --	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 --iend)
 
--- undotree key mappings 
+-- undotree key mappings
   -- Keymap Toggle
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
@@ -83,99 +84,6 @@ M.dap = {
   plugin = true,
   -- Normal Mode mappings
   n = {
-    -- ["<leader>db"] = {
-    --   "<cmd> DapToggleBreakpoint <CR>",
-    --   "Add breakpoint at line",
-    -- },
-    -- ["<leader>dr"] = {
-    --   "<cmd> DapContinue <CR>",
-    --   "Start or continue the debugger",
-    -- },
-    -- ["<F4>"] = {
-    --   "<cmd>lua require('dapui').toggle()<CR>",
-    --   "Toggle DAP UI",
-    -- },
-    -- ["<F5>"] = {
-    --   "<cmd>lua require('dap').toggle_breakpoint()<CR>",
-    --   "Toggle breakpoint",
-    -- },
-    -- ["<F9>"] = {
-    --   "<cmd>lua require('dap').continue()<CR>",
-    --   "Continue execution",
-    -- },
-    -- ["<F1>"] = {
-    --   "<cmd>lua require('dap').step_over()<CR>",
-    --   "Step over execution",
-    -- },
-    -- ["<F2>"] = {
-    --   "<cmd>lua require('dap').step_into()<CR>",
-    --   "Step into execution",
-    -- },
-    -- ["<F3>"] = {
-    --   "<cmd>lua require('dap').step_out()<CR>",
-    --   "Step out of execution",
-    -- },
-    --      ["<Leader>dsc"] = {
-    --   "<cmd>lua require('dap').continue()<CR>",
-    --   "Continue execution",
-    -- },
-    -- ["<Leader>dsv"] = {
-    --   "<cmd>lua require('dap').step_over()<CR>",
-    --   "Step over execution",
-    -- },
-    -- ["<Leader>dsi"] = {
-    --   "<cmd>lua require('dap').step_into()<CR>",
-    --   "Step into execution",
-    -- },
-    -- ["<Leader>dso"] = {
-    --   "<cmd>lua require('dap').step_out()<CR>",
-    --   "Step out of execution",
-    -- },
-    -- ["<Leader>dhh"] = {
-    --   "<cmd>lua require('dap.ui.variables').hover()<CR>",
-    --   "Hover over variable",
-    -- },
-    -- ["<Leader>dhv"] = {
-    --   "<cmd>lua require('dap.ui.variables').visual_hover()<CR>",
-    --   "Visual hover over variable",
-    -- },
-    -- ["<Leader>duh"] = {
-    --   "<cmd>lua require('dap.ui.widgets').hover()<CR>",
-    --   "Hover over widget",
-    -- },
-    -- ["<Leader>duf"] = {
-    --   "<cmd>lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>",
-    --   "Center float widget",
-    -- },
-    -- ["<Leader>dro"] = {
-    --   "<cmd>lua require('dap').repl.open()<CR>",
-    --   "Open REPL",
-    -- },
-    -- ["<Leader>drl"] = {
-    --   "<cmd>lua require('dap').repl.run_last()<CR>",
-    --   "Run last in REPL",
-    -- },
-    -- ["<Leader>dbc"] = {
-    --   "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-    --   "Set breakpoint with condition",
-    -- },
-    -- ["<Leader>dbm"] = {
-    --   "<cmd>lua require('dap').set_breakpoint({ nil, nil, vim.fn.input('Log point message: ') })<CR>",
-    --   "Set logpoint message",
-    -- },
-    -- ["<Leader>dbt"] = {
-    --   "<cmd>lua require('dap').toggle_breakpoint()<CR>",
-    --   "Toggle breakpoint",
-    -- },
-    -- ["<Leader>dc"] = {
-    --   "<cmd>lua require('dap.ui.variables').scopes()<CR>",
-    --   "Show variable scopes",
-    -- },
-    -- ["<Leader>di"] = {
-    --   "<cmd>lua require('dapui').toggle()<CR>",
-    --   "Toggle DAP UI",
-    -- },
-
   }
 }
 
