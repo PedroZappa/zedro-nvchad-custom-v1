@@ -90,10 +90,16 @@ local plugins = {
         event = 'VeryLazy',
     },
     -- Codeium
-    {
-        'Exafunction/codeium.vim',
-        event = 'VeryLazy',
-    },
+    -- {
+    --     'Exafunction/codeium.vim',
+    --     event = 'VeryLazy',
+    -- },
+
+	-- Copilot
+	{
+		'github/copilot.vim',
+		event = 'VeryLazy',
+	},
     -- vim-tmux-navigator
     {
         'christoomey/vim-tmux-navigator',
