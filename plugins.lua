@@ -95,9 +95,10 @@ local plugins = {
         event = 'VeryLazy',
     },
 	-- Github Copilot
-	-- {
-		-- 'github/copilot.vim'
-	-- },
+	{
+		'github/copilot.vim',
+		event = 'VeryLazy',
+	},
     -- vim-tmux-navigator
     {
         'christoomey/vim-tmux-navigator',
