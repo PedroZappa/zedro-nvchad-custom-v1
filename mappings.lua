@@ -21,8 +21,8 @@ vim.keymap.set("n", "<leader>cx", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Source Neovim
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-  end
+	vim.cmd("so")
+end
 )
 
 -- Resizing Window
@@ -55,17 +55,17 @@ vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
 
 -- telescope key mappings
-  -- All file search
+-- All file search
 --vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-  -- Git file search
+-- Git file search
 --vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-  -- Project search
+-- Project search
 --vim.keymap.set('n', '<leader>ps', function()
 --	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 --iend)
 
 -- undotree key mappings
-  -- Keymap Toggle
+-- Keymap Toggle
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Fugitive (Git integration)
@@ -80,11 +80,11 @@ vim.keymap.set('i', '<C-x>', function () return vim.fn['codeium#Clear']() end, {
 
 -- nvim-dap key mappings
 M.dap = {
-  -- Mappings appear only when explicitly loaded
-  plugin = true,
-  -- Normal Mode mappings
-  n = {
-  }
+	-- Mappings appear only when explicitly loaded
+	plugin = true,
+	-- Normal Mode mappings
+	n = {
+	}
 }
 
 return M
