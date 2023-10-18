@@ -9,9 +9,12 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Cursor
-opt.cursorline = true
--- opt.cursorlineopt = 'both'
 opt.cursorcolumn = true
+opt.cursorline = true
+opt.cursorlineopt = 'both'
+--opt.colorcolumn = purple;
+--vim.api.nvim_set_hl(0, 'CursorLine', { underline = true }) 
+--opt.highlight.CursorLine = { gui = "underline" }
 opt.whichwrap = '<,>'
 
 -- Tabs
@@ -69,6 +72,11 @@ vim.api.nvim_exec([[
 		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
 	augroup END
 ]], false)
+
+-- Set the cursor line to have a line at the bottom
+vim.cmd [[
+  autocmd BufEnter * highlight CursorLine gui=underline
+]]
 
 -- Vim Commands
 -- Set the cursor line to have a line at the bottom
