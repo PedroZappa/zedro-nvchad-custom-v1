@@ -1,4 +1,5 @@
 local opt = vim.opt
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Options--
 -- Line Numbers
@@ -7,13 +8,13 @@ opt.numberwidth = 4
 opt.relativenumber = true
 opt.ignorecase = true
 opt.smartcase = true
+opt.ruler = true
 
 -- Cursor
 opt.cursorcolumn = true
 opt.cursorline = true
 opt.cursorlineopt = 'both'
---opt.colorcolumn = purple;
---vim.api.nvim_set_hl(0, 'CursorLine', { underline = true }) 
+opt.colorcolumn = '80';
 --opt.highlight.CursorLine = { gui = "underline" }
 opt.whichwrap = '<,>'
 
@@ -46,7 +47,17 @@ opt.incsearch = true
 
 -- Other
 opt.showcmd = true
+opt.showmode = true
 
+-- Spelling
+--- Enable spell check for .md and .txt files
+autocmd("BufRead,BufNewFile", {
+	pattern = { "*.md", "*.txt" },
+	callback = function()
+		vim.opt_local.spell = true
+		vim.opt_local.spelllang = "en"
+	end,
+})
 
 -- Time
 vim.opt.updatetime = 50
@@ -57,7 +68,6 @@ vim.opt.signcolumn = "yes"
 
 -- Autocommands
 --
-local autocmd = vim.api.nvim_create_autocmd
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
