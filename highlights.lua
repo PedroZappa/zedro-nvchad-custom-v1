@@ -5,13 +5,11 @@
 local M = {}
 
 ---@type Base46HLGroupsList
-M.override = {
-  Comment = {
-    italic = true,
-  },
-  theme = 'chadracula',
-  transparency = true,
-}
+-- M.override = {
+--   Comment = {
+--     italic = true,
+--   },
+-- }
 
 ---@type HLTable
 M.add = {
