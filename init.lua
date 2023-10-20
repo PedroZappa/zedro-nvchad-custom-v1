@@ -13,7 +13,7 @@ opt.ruler = true
 -- Cursor
 opt.cursorcolumn = true
 opt.cursorline = true
-opt.cursorlineopt = 'both'
+-- opt.cursorlineopt = 'rgba:1/1/1/50'
 opt.colorcolumn = '80';
 --opt.highlight.CursorLine = { gui = "underline" }
 opt.whichwrap = '<,>'
