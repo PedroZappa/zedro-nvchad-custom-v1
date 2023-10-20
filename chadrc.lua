@@ -10,6 +10,14 @@ M.ui = {
 	transparency = true,
 	hl_override = highlights.override,
 	hl_add = highlights.add,
+
+	statusline = {
+		theme = 'vscode_colored',
+	},
+	tabufline = {
+		lazyload = true
+	},
+
 }
 
 -- Plugins
