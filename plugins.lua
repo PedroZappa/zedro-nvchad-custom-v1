@@ -156,6 +156,7 @@ local plugins = {
 							default_workspace = "notes",
 						},
 					},
+					["core.pivot"] = {},
 				},
 			}
 		end,
