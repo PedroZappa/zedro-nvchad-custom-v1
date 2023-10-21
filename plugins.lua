@@ -170,6 +170,8 @@ local plugins = {
 							journal_folder = "/notes",
 						}
 					},
+					["core.qol.todo_items"] = {},
+					["core.tangle"] = {},
 				},
 			}
 		end,
