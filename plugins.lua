@@ -157,6 +157,7 @@ local plugins = {
 						},
 					},
 					["core.pivot"] = {},
+					["core.itero"] = {},
 				},
 			}
 		end,
