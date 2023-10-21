@@ -158,6 +158,18 @@ local plugins = {
 					},
 					["core.pivot"] = {},
 					["core.itero"] = {},
+					["core.qol.toc"] = {
+						config = {
+							close_after_use = true,
+						}
+					},
+					["core.summary"] = {},
+					["core.esupports.metagen"] = {},
+					["core.journal"] = {
+						config = {
+							journal_folder = "~/notes",
+						}
+					},
 				},
 			}
 		end,
