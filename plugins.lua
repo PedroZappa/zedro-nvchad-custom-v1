@@ -167,7 +167,7 @@ local plugins = {
 					["core.esupports.metagen"] = {},
 					["core.journal"] = {
 						config = {
-							journal_folder = "~/notes",
+							journal_folder = "/notes",
 						}
 					},
 				},
