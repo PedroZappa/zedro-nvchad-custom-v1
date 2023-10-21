@@ -87,4 +87,7 @@ M.dap = {
 	}
 }
 
+-- Oil Mappings
+vim.keymap.set('n', '<leader>o', ':Oil<CR>')
+
 return M
