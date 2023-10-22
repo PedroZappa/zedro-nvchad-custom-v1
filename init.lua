@@ -52,7 +52,7 @@ opt.showmode = true
 -- Spelling
 --- Enable spell check for .md and .txt files
 autocmd("BufRead,BufNewFile", {
-	pattern = { "*.md", "*.txt" },
+	pattern = { "*.md", "*.txt", "*.norg" },
 	callback = function()
 		vim.opt_local.spell = true
 		vim.opt_local.spelllang = "en"
