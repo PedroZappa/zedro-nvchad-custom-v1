@@ -143,6 +143,7 @@ local plugins = {
 			require("neorg").setup {
 				load = {
 					["core.defaults"] = {}, -- Loads default behaviour
+					["core.integrations.treesitter"] = {},
 					["core.concealer"] = {
 						config = {
 							icon_preset = "diamond",

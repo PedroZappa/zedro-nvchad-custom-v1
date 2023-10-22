@@ -88,6 +88,12 @@ vim.cmd [[
   autocmd BufEnter * highlight CursorLine gui=underline
 ]]
 
+-- Conceal in Neorg 
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  pattern = {"*.norg"},
+  command = "set conceallevel=3"
+})
+
 -- Vim Commands
 -- Set the cursor line to have a line at the bottom
 --vim.cmd('highlight CursorLine gui=underline cterm=underline')
