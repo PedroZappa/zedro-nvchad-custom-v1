@@ -3,13 +3,22 @@ local M = {}
 -- set leader
 vim.g.mapleader = " "
 
--- General Mappings
 M.general = {
 	n = {
+		-- Source Neovim
+		["<leader><leader>"] = { "<cmd>so %<CR>", "Source Neovim" },
 		-- Replace Script
 		["<leader>s"] = {
 			[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 			"Replace word from whole file"
+		},
+		-- Trim Trailing blanks
+		["<leader>trm"] = {
+			":%s/\\s\\+$//<CR>", "Trim Trailing whitespaces",
+			opts = {
+				noremap = true,
+				silent = true,
+			}
 		},
 		-- Resizing Window
 		["<C-up>"] = { "<C-w>+", "Up" },
@@ -17,16 +26,18 @@ M.general = {
 		["<C-left>"] = { "<C-w>>", "Left" },
 		["<C-right>"] = { "<C-w><", "Right" },
 		-- Give exec permission to file
-		["<leader>cx"] = { "<cmd>!chmod +x %<CR>", "Give exec permission to file" },
-		-- Source Neovim
-		["<leader><leader>"] = { "<cmd>so %<CR>", "Source Neovim" },
+		["<leader>cx"] = { ":!chmod +x %<CR>", "Give exec permission to file" },
 		-- Oil Mappings
-		-- ["<leader>o"] = { "<cmd>Oil<CR>", "Oil Mappings" },
-	},
-	i = {		
-		-- Codeium Keybings
-		-- ["<C-g>"] = { function() return vim.fn['codeium#Accept']() end, { expr = true } },
-		-- ["<C-x>"] = { function() return vim.fn['codeium#Clear']() end, { expr = true } },
+		["<leader>o"] = { ":Oil<CR>", "Oil Mappings" },
+		-- Nvimtree Mappings
+		["<leader>n"] = { ":NvimTreeToggle<CR>", "NvimTree Toggle" },
+		["<leader>e"] = { ":NvimTreeFocus<CR>", "NvimTree Focus" },
+		-- Undotree Mappings
+		["<leader>u"] = { ":UndotreeToggle<CR>", "Undotree Mappings" },
+		-- Fugitive (Git integration) GitStatus
+		["<leader>gs"] = { ":Git<CR>", "GitStatus" },
+		-- LazyGit
+		["<leader>gg"] = { ":LazyGit<CR>", "LazyGit" },
 	},
 	v = {
 		-- Move selected blocks of code around
@@ -34,24 +45,6 @@ M.general = {
 		["K"] = { ":m '<-2<CR>gv=gv", "Move selected lines up" },
 	},
 }
-
--- formatting
--- trim whitespace from the end of every line
-vim.api.nvim_set_keymap('n', '<leader>trm', ':%s/\\s\\+$//<CR>', { noremap = true, silent = true })
-
--- nvim-tree key mappings
-vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
-
--- undotree key mappings
--- Keymap Toggle
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-
--- Fugitive (Git integration)
--- Keymap: GitStatus
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
--- lazygit
-vim.keymap.set("n", "<leader>gg", "<Cmd>LazyGit<CR>")
 
 -- Codeium Keybings
 vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
@@ -65,8 +58,5 @@ M.dap = {
 	n = {
 	}
 }
-
--- Oil Mappings
-vim.keymap.set('n', '<leader>o', ':Oil<CR>')
 
 return M
