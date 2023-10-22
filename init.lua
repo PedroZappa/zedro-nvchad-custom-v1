@@ -25,7 +25,7 @@ opt.shiftwidth = 4
 opt.expandtab = false
 -- Buffer tabs 
 opt.showtabline = 2
-opt.winbar = '=%=%m\\ %f'
+opt.winbar = '=%=%k %r %h %m %f %w'
 -- Indentation
 opt.autoindent = true
 opt.smartindent = true
