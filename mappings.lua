@@ -38,6 +38,12 @@ M.general = {
 		["<leader>gs"] = { ":Git<CR>", "GitStatus" },
 		-- LazyGit
 		["<leader>gg"] = { ":LazyGit<CR>", "LazyGit" },
+		-- Parrot Crash
+		["<leader>pl"] = {
+			":term curl parrot.live<CR>:vs<CR>:term curl parrot.live<CR>:vs<CR>:term curl parrot.live<CR>:spl<CR>:term curl parrot.live<CR><C-w>h:spl<CR>:term curl parrot.live<CR><C-w>h:spl<CR>:term curl parrot.live<CR>",
+			"Parrot Party"
+		},
+		-- ["<leader>pl"] = { ":term curl parrot.live<CR>", "Parrot Crash" },
 	},
 	v = {
 		-- Move selected blocks of code around
