@@ -189,6 +189,11 @@ local plugins = {
 			return require 'custom.configs.oil'
 		end,
 	},
+	-- vim-table-mode
+	{
+		'dhruvasagar/vim-table-mode',
+		event = 'VeryLazy',
+	},
 
 	-- Config overrides
 	{
