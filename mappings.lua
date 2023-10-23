@@ -37,7 +37,7 @@ M.general = {
 		--
 		-- Plugin Mappings
 		-- Oil Mappings
-		["-"] = { ":Oil<CR>", "Open Parent Directory with Oil" },
+		["-"] = { ":Oil --float<CR>", "Open Parent Directory with Oil" },
 		-- Nvimtree Mappings
 		["<leader>n"] = { ":NvimTreeToggle<CR>", "NvimTree Toggle" },
 		["<leader>e"] = { ":NvimTreeFocus<CR>", "NvimTree Focus" },
