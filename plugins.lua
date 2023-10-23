@@ -186,6 +186,9 @@ local plugins = {
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = 'VeryLazy',
+		opts = function()
+			return require 'custom.configs.oil'
+		end,
 	},
 
 	-- Config overrides
