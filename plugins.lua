@@ -182,7 +182,6 @@ local plugins = {
 	-- Oil (baby!!!)
 	{
 		'stevearc/oil.nvim',
-		opts = {},
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = 'VeryLazy',
