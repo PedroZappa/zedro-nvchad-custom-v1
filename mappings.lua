@@ -7,9 +7,9 @@ M.general = {
 	n = {
 		-- Source Neovim
 		["<leader><leader>"] = { "<cmd>so %<CR>", "Source Neovim" },
-		-- Open Options 
+		-- Open Options
 		["<leader>o"] = { ":vert options<CR>", "Open Options in a vertical split" },
-		-- Close Buffer 
+		-- Close Buffer
 		["<leader>bd"] = { ":clo<CR>", "Close active buffer" },
 		-- Cycle through open buffers
 		["<leader>bn"] = { ":bnext<CR>", "Next buffer" },
@@ -59,14 +59,16 @@ M.general = {
 		-- Yank selection and search for it in C files
 		["<leader>ys"] = { ':<C-U>exe "grep /" .. escape(@", \'\\\\/\') .. "/ *.c *.h"<CR>', {noremap = true} },
 	},
+	i = {
+		-- Codeium Mappings
+		["<C-g>"] = { function() return vim.fn['codeium#Accept']() end, "Codeium Accept", opts = { expr = true }},
+		["<C-x>"] = { function() return vim.fn['codeium#Clear']() end, "Codeium Clear", opts = { expr = true }},
+		["<M-]>"] = { function() return vim.fn['codeium#CycleCompletions'](1) end, "Cycle Completions: Next", opts = { expr = true }},
+		["<M-[>"] = { function() return vim.fn['codeium#CycleCompletions'](-1) end, "Cycle Completions: Prev", opts = { expr = true }},
+		-- Manually trigger suggestions
+		["<C-Bslash>"] = { function() return vim.fn['codeium#Complete']() end, "Codeium Manually Trigger Suggestion", opts = { expr = true }},
+	}
 }
-
--- " Yank visually selected text and serch for it in C files
--- vnoremap _g y:exe "grep /" .. escape(@", '\\/') .. "/ *.c *.h"<CR>
---
--- Codeium Keybings
-vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-vim.keymap.set('i', '<C-x>', function () return vim.fn['codeium#Clear']() end, { expr = true })
 
 -- nvim-dap key mappings
 M.dap = {
