@@ -47,6 +47,7 @@ M.ui = {
 			{ "  Bookmarks", "Spc m a", "Telescope marks" },
 			{ "  Themes", "Spc t h", "Telescope themes" },
 			{ "  Mappings", "Spc c h", "NvCheatsheet" },
+			{ "󰏇  Get Oily", "-", "Open Oil buffer"},
 			{ "  Party!", "Spc p l", ":!curl parrot.live"},
 		},
 	},
