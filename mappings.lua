@@ -61,14 +61,15 @@ M.general = {
 	},
 	i = {
 		-- Codeium Mappings
-		["<C-g>"] = { function() return vim.fn['codeium#Accept']() end, "Codeium Accept", opts = { expr = true }},
-		["<C-x>"] = { function() return vim.fn['codeium#Clear']() end, "Codeium Clear", opts = { expr = true }},
-		["<M-]>"] = { function() return vim.fn['codeium#CycleCompletions'](1) end, "Cycle Completions: Next", opts = { expr = true }},
-		["<M-[>"] = { function() return vim.fn['codeium#CycleCompletions'](-1) end, "Cycle Completions: Prev", opts = { expr = true }},
+		-- ["<C-g>"] = { function() return vim.fn['codeium#Accept']() end, "Codeium Accept", opts = { expr = true, noremap = true, nowait = true }},
+		["<C-x>"] = { function() return vim.fn['codeium#Clear']() end, "Codeium Clear", { expr = true }},
+		["<M-]>"] = { function() return vim.fn['codeium#CycleCompletions'](1) end, "Cycle Completions: Next", { expr = true }},
+		["<M-[>"] = { function() return vim.fn['codeium#CycleCompletions'](-1) end, "Cycle Completions: Prev", { expr = true }},
 		-- Manually trigger suggestions
-		["<C-Bslash>"] = { function() return vim.fn['codeium#Complete']() end, "Codeium Manually Trigger Suggestion", opts = { expr = true }},
+		["<C-Bslash>"] = { function() return vim.fn['codeium#Complete']() end, "Codeium Manually Trigger Suggestion", { expr = true }},
 	}
 }
+vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
 
 -- nvim-dap key mappings
 M.dap = {
