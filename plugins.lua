@@ -186,6 +186,7 @@ local plugins = {
 	},
 	"rcarriga/nvim-notify",   -- optional
 	"stevearc/dressing.nvim", -- optional, UI for :JupyniumKernelSelect
+	-- Cheatsheet for Neovim mappings
 	{
 		'sudormrfbin/cheatsheet.nvim',
 		event = 'VeryLazy',
