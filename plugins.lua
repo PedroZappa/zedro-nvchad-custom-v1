@@ -1,15 +1,6 @@
 local overrides = require("custom.configs.overrides")
 
 local plugins = {
-	-- null-ls configuration
-	-- {
-	-- 	'jose-elias-alvarez/null-ls.nvim',
-	-- 	event = 'VeryLazy',
-	-- 	opts = function()
-	-- 		return require 'custom.configs.null-ls'
-	-- 	end,
-	-- },
-	-- Defaults for LSP servers
 	{
 		'neovim/nvim-lspconfig',
 		config = function ()
@@ -66,6 +57,7 @@ local plugins = {
 	-- nvim-dap-virtual-text
 	{
 		'theHamsta/nvim-dap-virtual-text',
+		event = 'VeryLazy',
 	},
 	-- Undotree
 	{
@@ -218,11 +210,18 @@ local plugins = {
 	-- Cheat Sheet for Neovim Mappings
 	{
 		'sudormrfbin/cheatsheet.nvim',
+		event = 'VeryLazy',
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"nvim-lua/plenary.nvim",
 			"nvim-lua/popup.nvim",
 		},
+	},
+	-- cht.sh Integration
+	{
+		'RishabhRD/popfix',
+		'RishabhRD/nvim-cheat.sh',
+		event = 'VeryLazy',
 	},
 
 	-- Config overrides
