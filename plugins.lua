@@ -2,13 +2,13 @@ local overrides = require("custom.configs.overrides")
 
 local plugins = {
 	-- null-ls configuration
-	{
-		'jose-elias-alvarez/null-ls.nvim',
-		event = 'VeryLazy',
-		opts = function()
-			return require 'custom.configs.null-ls'
-		end,
-	},
+	-- {
+	-- 	'jose-elias-alvarez/null-ls.nvim',
+	-- 	event = 'VeryLazy',
+	-- 	opts = function()
+	-- 		return require 'custom.configs.null-ls'
+	-- 	end,
+	-- },
 	-- Defaults for LSP servers
 	{
 		'neovim/nvim-lspconfig',
@@ -218,6 +218,11 @@ local plugins = {
 	-- Cheat Sheet for Neovim Mappings
 	{
 		'sudormrfbin/cheatsheet.nvim',
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-lua/popup.nvim",
+		},
 	},
 
 	-- Config overrides
