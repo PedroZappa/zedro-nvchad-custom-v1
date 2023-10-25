@@ -19,6 +19,21 @@ local plugins = {
 			require 'custom.configs.lspconfig'
 		end
 	},
+	-- Package Manager for LSP, DAPs, linters & formatters
+	{
+	    'williamboman/mason.nvim',
+	    opts = {
+	        ensure_installed = {
+				-- LSP for C
+	           "clangd",
+	            "clang-format",
+	            "codelldb",
+				-- LSP for Python
+	            "pylyzer",
+	        }
+	    }
+	},
+
 	-- DAP (Debug Adapter Protocol)
 	{
 		'mfussenegger/nvim-dap',
@@ -215,10 +230,6 @@ local plugins = {
 	-- 		"<leader>vc", "<cmd>:VenvSelectCached<cr>"
 	-- 	}}
 	-- },
-	-- Cheat Sheet for Neovim Mappings
-	{
-		'sudormrfbin/cheatsheet.nvim',
-	},
 
 	-- Config overrides
 	{

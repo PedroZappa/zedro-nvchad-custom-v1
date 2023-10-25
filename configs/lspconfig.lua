@@ -5,10 +5,10 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { 
-	"html", 
-	"cssls", 
-	"tsserver", 
+local servers = {
+	"html",
+	"cssls",
+	"tsserver",
 	"clangd",
 	"pylyzer",
 }
@@ -20,18 +20,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- Call setup function of 'clangd' on lspconfig plugin 
-lspconfig.clangd.setup {
-  -- add function for on_attach value
-  on_attach = function (client, bufnr)
-    -- small overrides to fix bug within NvChad & 'clangd'
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
---
--- lspconfig.pylyzer.setup {
---   on_attach = on_attach,
+-- Call setup function of 'clangd' on lspconfig plugin
+-- lspconfig.clangd.setup {
+--   -- add function for on_attach value
+--   on_attach = function (client, bufnr)
+--     -- small overrides to fix bug within NvChad & 'clangd'
+--     client.server_capabilities.signatureHelpProvider = false
+--     on_attach(client, bufnr)
+--   end,
 --   capabilities = capabilities,
 -- }

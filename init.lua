@@ -114,3 +114,8 @@ vim.cmd [[
     autocmd WinEnter * set cursorline cursorcolumn
   augroup END
 ]]
+
+-- 42 hEADER sETTINGS
+vim.g.user42 = 'passunca'
+vim.g.mail42 = 'passunca@student.42porto.com'
+
