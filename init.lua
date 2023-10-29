@@ -52,6 +52,7 @@ opt.showmode = true
 
 -- Spelling
 --- Enable spell check for .md and .txt files
+vim.cmd("autocmd BufRead,BufNewFile *.md,*.txt setlocal spell")
 
 -- Time
 vim.opt.updatetime = 50
@@ -89,8 +90,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 
 -- Vim Commands
--- Set the cursor line to have a line at the bottom
---vim.cmd('highlight CursorLine gui=underline cterm=underline')
 -- Highlight on yank
 vim.cmd [[
   augroup YankHighlight
