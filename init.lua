@@ -19,7 +19,12 @@ opt.colorcolumn = '80';
 opt.whichwrap = '<,>'
 
 -- Windows
+opt.splitbelow = true
+opt.splitright = true
 opt.equalalways = false
+
+-- sync with system Clipboard (through + register)
+opt.clipboard = "unnamedplus"
 
 -- Tabs
 opt.tabstop = 4
