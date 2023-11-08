@@ -18,6 +18,9 @@ opt.colorcolumn = '80';
 --opt.highlight.CursorLine = { gui = "underline" }
 opt.whichwrap = '<,>'
 
+-- Windows
+opt.equalalways = false
+
 -- Tabs
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -31,8 +34,8 @@ opt.autoindent = true
 opt.smartindent = true
 
 -- Scroll
-opt.scrolloff = 7
-opt.sidescrolloff = 7
+opt.scrolloff = 3
+opt.sidescrolloff = 3
 -- Fold Marks
 opt.fmr = "{{{,}}}"
 
@@ -52,7 +55,7 @@ opt.showmode = true
 
 -- Spelling
 --- Enable spell check for .md and .txt files
-vim.cmd("autocmd BufRead,BufNewFile *.md,*.txt setlocal spell")
+vim.cmd("autocmd BufRead,BufNewFile *.md,*.txt,*.norg setlocal spell")
 
 -- Time
 vim.opt.updatetime = 50
