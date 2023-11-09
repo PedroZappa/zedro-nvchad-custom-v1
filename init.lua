@@ -4,7 +4,7 @@ local autocmd = vim.api.nvim_create_autocmd
 -- Options--
 -- Line Numbers
 opt.number = true
-opt.numberwidth = 4
+opt.numberwidth = 3
 opt.relativenumber = true
 opt.ignorecase = true
 opt.smartcase = true
