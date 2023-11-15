@@ -17,6 +17,7 @@ opt.cursorline = true
 opt.colorcolumn = '80';
 --opt.highlight.CursorLine = { gui = "underline" }
 opt.whichwrap = '<,>'
+opt.wrap = false
 
 -- Windows
 opt.splitbelow = true
@@ -41,6 +42,8 @@ opt.smartindent = true
 -- Scroll
 opt.scrolloff = 3
 opt.sidescrolloff = 3
+-- opt.sidescrolloff = 999
+
 -- Fold Marks
 opt.fmr = "{{{,}}}"
 
@@ -54,7 +57,14 @@ opt.undofile = true
 -- Search
 opt.incsearch = true
 
+-- Virtual Edit
+opt.virtualedit = "block"
+
+-- Inc Command
+opt.inccommand = "split"
+
 -- Other
+opt.termguicolors = true
 opt.showcmd = true
 opt.showmode = true
 
