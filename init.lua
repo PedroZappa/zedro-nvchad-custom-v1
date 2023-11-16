@@ -89,12 +89,12 @@ vim.opt.signcolumn = "yes"
 -- })
 
 -- FileType Autocommands
-vim.api.nvim_exec([[
-	augroup filetype_vim
-		autocmd!
-		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
-	augroup END
-]], false)
+-- vim.api.nvim_exec([[
+-- 	augroup filetype_vim
+-- 		autocmd!
+-- 		autocmd FileType html,markdown setlocal tabstop=4 shiftwidth=4
+-- 	augroup END
+-- ]], false)
 
 -- Set the cursor line to have a line at the bottom
 vim.cmd [[
