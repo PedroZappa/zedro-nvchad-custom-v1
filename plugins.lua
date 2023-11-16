@@ -205,6 +205,13 @@ local plugins = {
 		'RishabhRD/nvim-cheat.sh',
 		event = 'VeryLazy',
 	},
+	-- Color Picker
+	{
+		"ziontee113/color-picker.nvim";
+		opts = function()
+			return require 'custom.configs.color-picker'
+		end,
+	},
 
 	-- Config overrides
 	{
