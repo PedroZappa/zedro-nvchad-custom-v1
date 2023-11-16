@@ -83,10 +83,10 @@ vim.opt.signcolumn = "yes"
 --
 
 -- Auto resize panes when resizing nvim window
-autocmd("VimResized", {
-  pattern = "*",
-  command = "tabdo wincmd =",
-})
+-- autocmd("VimResized", {
+--   pattern = "*",
+--   command = "tabdo wincmd =",
+-- })
 
 -- FileType Autocommands
 vim.api.nvim_exec([[
